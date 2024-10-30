@@ -1,0 +1,18 @@
+---
+- hosts: myservers
+  become: yes  # Использовать sudo для выполнения задач от имени администратора
+  tasks:
+    - name: Установка репозитория EPEL
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Установка Nginx
+      yum:
+        name: nginx
+        state: present
+
+    - name: Убедиться, что Nginx запущен
+      service:
+        name: nginx
+        state: started
