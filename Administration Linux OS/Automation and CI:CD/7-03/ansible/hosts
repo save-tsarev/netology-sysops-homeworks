@@ -1,2 +1,0 @@
-[myservers]
-84.201.140.19 ansible_user=atsarev ansible_ssh_private_key_file=~/.ssh/id_rsa
